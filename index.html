@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadith SQLite API - Documentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <div class="glass-bg"></div>
+    
+    <header>
+        <div class="container">
+            <h1>Hadith SQLite API</h1>
+            <p>High-performance, offline-ready Hadith data for your applications.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="url-config card">
+            <h2>1. Configure Your API Base URL</h2>
+            <p>Enter the URL where your <code>compressed_hadith_sqlite</code> folder is hosted (e.g., from GitHub Pages).</p>
+            <div class="input-group">
+                <input type="text" id="baseUrl" placeholder="https://username.github.io/repo-name" autocomplete="off">
+            </div>
+        </section>
+
+        <section class="endpoints">
+            <h2>2. Available Endpoints</h2>
+            
+            <div class="card endpoint">
+                <h3>Get All Books Metadata</h3>
+                <p>Returns a global list of all available languages and their corresponding books.</p>
+                <div class="code-block">
+                    <code id="allInfoLink">Loading...</code>
+                    <button class="copy-btn" onclick="copyText('allInfoLink')">Copy</button>
+                </div>
+            </div>
+
+            <div class="card endpoint">
+                <h3>Get Language Metadata</h3>
+                <p>Returns all books and checksums for a specific language (e.g., <code>ara</code>, <code>eng</code>, <code>ben</code>).</p>
+                <div class="code-block">
+                    <code id="langInfoLink">Loading...</code>
+                    <button class="copy-btn" onclick="copyText('langInfoLink')">Copy</button>
+                </div>
+            </div>
+
+            <div class="card endpoint">
+                <h3>Download SQLite ZIP</h3>
+                <p>Download the compressed SQLite database for a specific edition.</p>
+                <div class="code-block">
+                    <code id="downloadLink">Loading...</code>
+                    <button class="copy-btn" onclick="copyText('downloadLink')">Copy</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="integration card">
+            <h2>3. Integration Guide</h2>
+            <p>Follow these steps to integrate the API into your app:</p>
+            <ol>
+                <li>Fetch <code>all_info.json</code> to get the list of supported languages.</li>
+                <li>Fetch the language-specific <code>info.json</code> to get book names and <strong>SHA256 checksums</strong>.</li>
+                <li>Compare local checksums with the API to see if an update is required.</li>
+                <li>Download the <code>.sqlite.zip</code> file and decompress it on the device.</li>
+                <li>Open the <code>.sqlite</code> file and use <strong>FTS5</strong> for fast searching.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with ❤️ for the Ummah.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
