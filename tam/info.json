@@ -1,0 +1,25 @@
+{
+    "language": "tam",
+    "books": [
+        {
+            "book": "tam-bukhari",
+            "name": "Sahih al Bukhari",
+            "hadith_count": 7278,
+            "section_count": 97,
+            "checksum": "94b516e156334063a80b77d0105eba1bf43e4ee8f45aea5855a652816ae2aeb4",
+            "zip_path": "tam/tam-bukhari.sqlite.zip",
+            "file_size": 21823488,
+            "zip_size": 4802328
+        },
+        {
+            "book": "tam-muslim",
+            "name": "Sahih Muslim",
+            "hadith_count": 7219,
+            "section_count": 56,
+            "checksum": "2a2a13bd6a88c7ac3980541596795134ca840efd38c7a4d899f47bd06121937f",
+            "zip_path": "tam/tam-muslim.sqlite.zip",
+            "file_size": 8830976,
+            "zip_size": 1969350
+        }
+    ]
+}

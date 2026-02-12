@@ -1,0 +1,75 @@
+{
+    "language": "tur",
+    "books": [
+        {
+            "book": "tur-abudawud",
+            "name": "Sunan Abu Dawud",
+            "hadith_count": 5274,
+            "section_count": 43,
+            "checksum": "710b0d57a4302a7fef9729572ff11c62c08c67254c0885d132824ec86dca8db8",
+            "zip_path": "tur/tur-abudawud.sqlite.zip",
+            "file_size": 6074368,
+            "zip_size": 2365107
+        },
+        {
+            "book": "tur-bukhari",
+            "name": "Sahih al Bukhari",
+            "hadith_count": 7278,
+            "section_count": 97,
+            "checksum": "64d2952c777cff75237f061be59d71b2ea1adedec1803272349b586224006e4d",
+            "zip_path": "tur/tur-bukhari.sqlite.zip",
+            "file_size": 15847424,
+            "zip_size": 6450706
+        },
+        {
+            "book": "tur-ibnmajah",
+            "name": "Sunan Ibn Majah",
+            "hadith_count": 4077,
+            "section_count": 37,
+            "checksum": "c22dde358f3e3e1d9a85f9e816e9577275cf92490ef22ddf5c0f43008c1ad7f6",
+            "zip_path": "tur/tur-ibnmajah.sqlite.zip",
+            "file_size": 6012928,
+            "zip_size": 2500535
+        },
+        {
+            "book": "tur-malik",
+            "name": "Muwatta Malik",
+            "hadith_count": 1840,
+            "section_count": 61,
+            "checksum": "42e8b342d0079d61af36274aa71bf3a9d0540a7036e7c9db3b6b12521f5031e0",
+            "zip_path": "tur/tur-malik.sqlite.zip",
+            "file_size": 1261568,
+            "zip_size": 552362
+        },
+        {
+            "book": "tur-muslim",
+            "name": "Sahih Muslim",
+            "hadith_count": 7219,
+            "section_count": 56,
+            "checksum": "b9691d07768b84e1d9af4f9a19f02440852e02367322d5220f65e7dd14d6ca48",
+            "zip_path": "tur/tur-muslim.sqlite.zip",
+            "file_size": 9609216,
+            "zip_size": 3922143
+        },
+        {
+            "book": "tur-nasai",
+            "name": "Sunan an Nasai",
+            "hadith_count": 5683,
+            "section_count": 51,
+            "checksum": "ba833a5d1a26d2208fc1ac98680c1c2374166ccb4bc820dc6d0dfe2d12c48a78",
+            "zip_path": "tur/tur-nasai.sqlite.zip",
+            "file_size": 1183744,
+            "zip_size": 421059
+        },
+        {
+            "book": "tur-tirmidhi",
+            "name": "Jami At Tirmidhi",
+            "hadith_count": 3998,
+            "section_count": 49,
+            "checksum": "15ca9c5458567d7fd8b467cd2336345784ddf929a59d0afed6079b299ce95b70",
+            "zip_path": "tur/tur-tirmidhi.sqlite.zip",
+            "file_size": 4911104,
+            "zip_size": 1960214
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "language": "rus",
+    "books": [
+        {
+            "book": "rus-abudawud",
+            "name": "Sunan Abu Dawud",
+            "hadith_count": 5274,
+            "section_count": 43,
+            "checksum": "bc86bc6eaf9fdad5a466c109d757fd6fc9cd82065a93c4e923e7ae332581105d",
+            "zip_path": "rus/rus-abudawud.sqlite.zip",
+            "file_size": 6115328,
+            "zip_size": 1967024
+        },
+        {
+            "book": "rus-bukhari",
+            "name": "Sahih al Bukhari",
+            "hadith_count": 7278,
+            "section_count": 97,
+            "checksum": "066259f20e4ddc4195349eda7a92f954f21d16a0b6652022563f41c0058fdf95",
+            "zip_path": "rus/rus-bukhari.sqlite.zip",
+            "file_size": 10526720,
+            "zip_size": 3359277
+        },
+        {
+            "book": "rus-muslim",
+            "name": "Sahih Muslim",
+            "hadith_count": 7219,
+            "section_count": 56,
+            "checksum": "bb70e02d3021ff68de783e0fa4621ebd68501c6a42027ff13936808e19bf303d",
+            "zip_path": "rus/rus-muslim.sqlite.zip",
+            "file_size": 3284992,
+            "zip_size": 1074593
+        }
+    ]
+}
