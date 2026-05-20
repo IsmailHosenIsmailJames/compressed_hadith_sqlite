@@ -3,77 +3,442 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hadith SQLite API - Documentation</title>
+    <title>Hadith SQLite API - Interactive Documentation</title>
+    <meta name="description" content="High-performance, offline-ready, statically-hosted Hadith API with compressed SQLite and FTS5 databases.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark-theme">
     <div class="glass-bg"></div>
     
     <header>
-        <div class="container">
+        <div class="container header-container">
+            <div class="badge">Offline-First Ready</div>
             <h1>Hadith SQLite API</h1>
-            <p>High-performance, offline-ready Hadith data for your applications.</p>
+            <p class="subtitle">High-performance, offline-ready Hadith databases for your applications.</p>
+            
+            <div class="features-grid">
+                <div class="feature-tag">
+                    <span class="dot"></span> 70% Zip Compression
+                </div>
+                <div class="feature-tag">
+                    <span class="dot"></span> Pre-indexed FTS5 Search
+                </div>
+                <div class="feature-tag">
+                    <span class="dot"></span> Static-Ready Hosting
+                </div>
+            </div>
         </div>
     </header>
 
     <main class="container">
-        <section class="url-config card">
-            <h2>1. Configure Your API Base URL</h2>
-            <p>Enter the URL where your <code>compressed_hadith_sqlite</code> folder is hosted (e.g., from GitHub Pages).</p>
-            <div class="input-group">
-                <input type="text" id="baseUrl" placeholder="https://username.github.io/repo-name" autocomplete="off">
+        <!-- 1. Interactive Configurator -->
+        <section class="card config-section" id="configurator">
+            <div class="card-header">
+                <div class="step-num">1</div>
+                <h2>Interactive Playground & Configurator</h2>
             </div>
-        </section>
-
-        <section class="endpoints">
-            <h2>2. Available Endpoints</h2>
+            <p>Customize the API endpoints below by selecting your target language, specific translation edition, and base hosting URL.</p>
             
-            <div class="card endpoint">
-                <h3>Get All Books Metadata</h3>
-                <p>Returns a global list of all available languages and their corresponding books.</p>
-                <div class="code-block">
-                    <code id="allInfoLink">Loading...</code>
-                    <button class="copy-btn" onclick="copyText('allInfoLink')">Copy</button>
+            <div class="grid-3-col">
+                <div class="form-group">
+                    <label for="baseUrl">API Base URL</label>
+                    <input type="text" id="baseUrl" placeholder="https://username.github.io/repo" autocomplete="off">
+                    <span class="input-hint">Will auto-detect current hostname if empty</span>
                 </div>
-            </div>
-
-            <div class="card endpoint">
-                <h3>Get Language Metadata</h3>
-                <p>Returns all books and checksums for a specific language (e.g., <code>ara</code>, <code>eng</code>, <code>ben</code>).</p>
-                <div class="code-block">
-                    <code id="langInfoLink">Loading...</code>
-                    <button class="copy-btn" onclick="copyText('langInfoLink')">Copy</button>
+                <div class="form-group">
+                    <label for="langSelect">Language</label>
+                    <select id="langSelect">
+                        <option value="eng">English (eng)</option>
+                    </select>
                 </div>
-            </div>
-
-            <div class="card endpoint">
-                <h3>Download SQLite ZIP</h3>
-                <p>Download the compressed SQLite database for a specific edition.</p>
-                <div class="code-block">
-                    <code id="downloadLink">Loading...</code>
-                    <button class="copy-btn" onclick="copyText('downloadLink')">Copy</button>
+                <div class="form-group">
+                    <label for="bookSelect">Book / Edition</label>
+                    <select id="bookSelect">
+                        <option value="eng-bukhari">Sahih al Bukhari</option>
+                    </select>
                 </div>
             </div>
         </section>
 
-        <section class="integration card">
-            <h2>3. Integration Guide</h2>
-            <p>Follow these steps to integrate the API into your app:</p>
-            <ol>
-                <li>Fetch <code>all_info.json</code> to get the list of supported languages.</li>
-                <li>Fetch the language-specific <code>info.json</code> to get book names and <strong>SHA256 checksums</strong>.</li>
-                <li>Compare local checksums with the API to see if an update is required.</li>
-                <li>Download the <code>.sqlite.zip</code> file and decompress it on the device.</li>
-                <li>Open the <code>.sqlite</code> file and use <strong>FTS5</strong> for fast searching.</li>
-            </ol>
+        <!-- 2. Endpoints & Explorer -->
+        <section class="endpoints-explorer">
+            <div class="endpoints-left">
+                <div class="section-title-wrap">
+                    <div class="step-num">2</div>
+                    <h2>API Endpoints</h2>
+                </div>
+                
+                <!-- Endpoint 1 -->
+                <div class="card endpoint-card">
+                    <div class="endpoint-header">
+                        <span class="method get">GET</span>
+                        <h3>Global Index</h3>
+                    </div>
+                    <p class="endpoint-desc">Retrieves a global index mapping all supported languages, editions, and metadata.</p>
+                    <div class="url-bar">
+                        <code id="allInfoLink">Loading...</code>
+                        <div class="btn-group">
+                            <button class="copy-btn icon-btn" onclick="copyText('allInfoLink')" title="Copy URL">Copy</button>
+                            <button class="action-btn test-btn" onclick="testEndpoint('allInfoLink')">Test</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endpoint 2 -->
+                <div class="card endpoint-card">
+                    <div class="endpoint-header">
+                        <span class="method get">GET</span>
+                        <h3>Language Index</h3>
+                    </div>
+                    <p class="endpoint-desc">Retrieves all books, file sizes, and SHA-256 checksums available for a specific language.</p>
+                    <div class="url-bar">
+                        <code id="langInfoLink">Loading...</code>
+                        <div class="btn-group">
+                            <button class="copy-btn icon-btn" onclick="copyText('langInfoLink')" title="Copy URL">Copy</button>
+                            <button class="action-btn test-btn" onclick="testEndpoint('langInfoLink')">Test</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endpoint 3 -->
+                <div class="card endpoint-card">
+                    <div class="endpoint-header">
+                        <span class="method get">GET</span>
+                        <h3>Database ZIP Download</h3>
+                    </div>
+                    <p class="endpoint-desc">Downloads the compressed SQLite database containing pre-indexed Hadiths, sections, and search triggers.</p>
+                    <div class="url-bar">
+                        <code id="downloadLink">Loading...</code>
+                        <div class="btn-group">
+                            <button class="copy-btn icon-btn" onclick="copyText('downloadLink')" title="Copy URL">Copy</button>
+                            <button class="action-btn download-btn" onclick="downloadDatabase()">Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Explorer Terminal -->
+            <div class="explorer-right">
+                <div class="console-card">
+                    <div class="console-header">
+                        <div class="console-dots">
+                            <span class="dot-red"></span>
+                            <span class="dot-yellow"></span>
+                            <span class="dot-green"></span>
+                        </div>
+                        <span class="console-title">Live API Sandbox Terminal</span>
+                        <span class="console-status" id="consoleStatus">Idle</span>
+                    </div>
+                    <div class="console-body">
+                        <div class="console-meta" id="consoleMeta" style="display: none;">
+                            <span class="meta-item">Status: <strong class="text-green" id="metaStatus">200 OK</strong></span>
+                            <span class="meta-item">Time: <span id="metaTime">12ms</span></span>
+                            <span class="meta-item">Size: <span id="metaSize">24.5 KB</span></span>
+                        </div>
+                        <pre id="consolePre"><code class="language-json" id="consoleCode">// Click "Test" on any endpoint above to fetch and inspect live metadata in real-time.</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Database Schema Visualizer -->
+        <section class="card schema-section">
+            <div class="card-header">
+                <div class="step-num">3</div>
+                <h2>SQLite Database Schema</h2>
+            </div>
+            <p>Every downloaded database contains a highly optimized layout pre-configured with Full-Text Search (FTS5) index tables and data synchronization triggers.</p>
+            
+            <div class="schema-grid">
+                <!-- Table 1: book_info -->
+                <div class="schema-table-card" onclick="toggleSchemaTable('schemaBookInfo')">
+                    <div class="schema-table-header">
+                        <h4>book_info</h4>
+                        <span class="badge-mini text-green">Metadata</span>
+                    </div>
+                    <div class="schema-table-body" id="schemaBookInfo">
+                        <div class="column-row header-row">
+                            <span>Field</span>
+                            <span>Type</span>
+                            <span>Key</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">id</span>
+                            <span class="col-type">INTEGER</span>
+                            <span class="col-key">PK</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">book_name</span>
+                            <span class="col-type">TEXT</span>
+                            <span class="col-key">-</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">hadith_count</span>
+                            <span class="col-type">INTEGER</span>
+                            <span class="col-key">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table 2: sections -->
+                <div class="schema-table-card" onclick="toggleSchemaTable('schemaSections')">
+                    <div class="schema-table-header">
+                        <h4>sections</h4>
+                        <span class="badge-mini text-blue">Chapters</span>
+                    </div>
+                    <div class="schema-table-body" id="schemaSections">
+                        <div class="column-row header-row">
+                            <span>Field</span>
+                            <span>Type</span>
+                            <span>Key</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">id</span>
+                            <span class="col-type">INTEGER</span>
+                            <span class="col-key">PK</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">section_name</span>
+                            <span class="col-type">TEXT</span>
+                            <span class="col-key">-</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">start_hadith_number</span>
+                            <span class="col-type">INTEGER</span>
+                            <span class="col-key">-</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">end_hadith_number</span>
+                            <span class="col-type">INTEGER</span>
+                            <span class="col-key">-</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">hadith_count</span>
+                            <span class="col-type">INTEGER</span>
+                            <span class="col-key">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table 3: hadiths -->
+                <div class="schema-table-card" onclick="toggleSchemaTable('schemaHadiths')">
+                    <div class="schema-table-header">
+                        <h4>hadiths</h4>
+                        <span class="badge-mini text-purple">Core Data</span>
+                    </div>
+                    <div class="schema-table-body" id="schemaHadiths">
+                        <div class="column-row header-row">
+                            <span>Field</span>
+                            <span>Type</span>
+                            <span>Key</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">id</span>
+                            <span class="col-type">INTEGER</span>
+                            <span class="col-key">PK</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">hadith_number</span>
+                            <span class="col-type">INTEGER</span>
+                            <span class="col-key">-</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">text</span>
+                            <span class="col-type">TEXT</span>
+                            <span class="col-key">Indexed</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">section_id</span>
+                            <span class="col-type">INTEGER</span>
+                            <span class="col-key">FK</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">book_id</span>
+                            <span class="col-type">INTEGER</span>
+                            <span class="col-key">FK</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table 4: grades -->
+                <div class="schema-table-card" onclick="toggleSchemaTable('schemaGrades')">
+                    <div class="schema-table-header">
+                        <h4>grades</h4>
+                        <span class="badge-mini text-yellow">Academic</span>
+                    </div>
+                    <div class="schema-table-body" id="schemaGrades">
+                        <div class="column-row header-row">
+                            <span>Field</span>
+                            <span>Type</span>
+                            <span>Key</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">id</span>
+                            <span class="col-type">INTEGER</span>
+                            <span class="col-key">PK</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">hadith_id</span>
+                            <span class="col-type">INTEGER</span>
+                            <span class="col-key">FK</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">scholar_name</span>
+                            <span class="col-type">TEXT</span>
+                            <span class="col-key">-</span>
+                        </div>
+                        <div class="column-row">
+                            <span class="col-name">grade</span>
+                            <span class="col-type">TEXT</span>
+                            <span class="col-key">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Multi-Tab Integration Snippets -->
+        <section class="card integration-section">
+            <div class="card-header">
+                <div class="step-num">4</div>
+                <h2>Client-Side Integration Snippets</h2>
+            </div>
+            <p>Select your favorite platform or development language below to see high-performance, drop-in code snippets for fetching and querying Hadiths entirely offline.</p>
+            
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="switchTab('js-tab')">JavaScript (Node/Web)</button>
+                    <button class="tab-btn" onclick="switchTab('flutter-tab')">Flutter (Dart)</button>
+                    <button class="tab-btn" onclick="switchTab('swift-tab')">Swift (iOS)</button>
+                    <button class="tab-btn" onclick="switchTab('kotlin-tab')">Kotlin (Android)</button>
+                </div>
+                
+                <div class="tab-content active" id="js-tab">
+                    <pre><code class="language-js">// High-Performance Offline Full-Text Search (FTS5) using JS/SQLite
+import sqlite3 from 'sqlite3';
+import { open } from 'sqlite';
+
+async function searchHadith(queryText) {
+  // Open the extracted local database
+  const db = await open({
+    filename: './eng-bukhari.sqlite',
+    driver: sqlite3.Database
+  });
+
+  // Query using pre-configured FTS5 trigger tables for millisecond matches
+  const results = await db.all(`
+    SELECT h.hadith_number, h.text, s.section_name 
+    FROM hadiths_fts f
+    JOIN hadiths h ON f.rowid = h.id
+    JOIN sections s ON h.section_id = s.id
+    WHERE hadiths_fts MATCH ? 
+    LIMIT 10
+  `, [queryText]);
+
+  console.log("Search Results:", results);
+  await db.close();
+}
+
+searchHadith("intention");</code></pre>
+                </div>
+
+                <div class="tab-content" id="flutter-tab">
+                    <pre><code class="language-dart">// High-Performance SQLite FTS5 Query in Flutter (sqflite)
+import 'package:sqflite/sqflite.dart';
+import 'package:path/path.dart';
+
+Future<List<Map<String, dynamic>>> searchHadithOffline(String queryText) async {
+  final dbPath = await getDatabasesPath();
+  final path = join(dbPath, "eng-bukhari.sqlite");
+  final Database db = await openDatabase(path, readOnly: true);
+
+  // Perform highly optimized FTS5 query
+  final List<Map<String, dynamic>> results = await db.rawQuery('''
+    SELECT h.hadith_number, h.text, s.section_name
+    FROM hadiths_fts f
+    JOIN hadiths h ON f.rowid = h.id
+    JOIN sections s ON h.section_id = s.id
+    WHERE hadiths_fts MATCH ?
+    LIMIT 20
+  ''', [queryText]);
+
+  return results;
+}</code></pre>
+                </div>
+
+                <div class="tab-content" id="swift-tab">
+                    <pre><code class="language-swift">// High-Performance SQLite FTS5 Query in iOS (Swift with SQLite.swift)
+import SQLite
+import Foundation
+
+func searchHadiths(matching query: String) throws -> [[String: Any]] {
+    let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+    let db = try Connection("\(path)/eng-bukhari.sqlite", readonly: true)
+    
+    let sqlQuery = """
+        SELECT h.hadith_number, h.text, s.section_name
+        FROM hadiths_fts f
+        JOIN hadiths h ON f.rowid = h.id
+        JOIN sections s ON h.section_id = s.id
+        WHERE hadiths_fts MATCH ?
+        LIMIT 20
+    """
+    
+    var results: [[String: Any]] = []
+    for row in try db.prepare(sqlQuery, [query]) {
+        results.append([
+            "hadith_number": row[0] as! Int64,
+            "text": row[1] as! String,
+            "section_name": row[2] as! String
+        ])
+    }
+    return results;
+}</code></pre>
+                </div>
+
+                <div class="tab-content" id="kotlin-tab">
+                    <pre><code class="language-kotlin">// SQLite FTS5 Search on Android (Kotlin/Room or SQLiteDatabase API)
+import android.database.sqlite.SQLiteDatabase
+
+fun searchHadithOffline(dbPath: String, searchQuery: String): List<HadithResult> {
+    val db = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READONLY)
+    val results = mutableListOf<HadithResult>()
+    
+    val cursor = db.rawQuery(
+        """
+        SELECT h.hadith_number, h.text, s.section_name
+        FROM hadiths_fts f
+        JOIN hadiths h ON f.rowid = h.id
+        JOIN sections s ON h.section_id = s.id
+        WHERE hadiths_fts MATCH ?
+        LIMIT 20
+        """.trimIndent(),
+        arrayOf(searchQuery)
+    )
+    
+    while (cursor.moveToNext()) {
+        results.add(HadithResult(
+            hadithNumber = cursor.getInt(0),
+            text = cursor.getString(1),
+            sectionName = cursor.getString(2)
+        ))
+    }
+    cursor.close()
+    db.close()
+    return results
+}</code></pre>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>Built with ❤️ for the Ummah.</p>
+        <div class="container">
+            <p>Static API server ready. Built with ❤️ for the global Ummah.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
