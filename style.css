@@ -660,6 +660,278 @@ footer {
     border-top: 1px solid var(--border);
 }
 
+.footer-nav {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 0.85rem;
+}
+
+.footer-nav a {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--primary);
+}
+
+/* Companion App Showcase Styling */
+.app-showcase-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.app-showcase-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 992px) {
+    .app-showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+.app-showcase-left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.app-showcase-left p.desc {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
+
+.app-feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.app-feature-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: left;
+}
+
+.app-feature-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(5px);
+}
+
+.app-feature-item.active {
+    background: rgba(16, 185, 129, 0.06);
+    border-color: rgba(16, 185, 129, 0.3);
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.05);
+}
+
+.feature-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.app-feature-item.active .feature-icon-wrapper {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 0 12px var(--primary-glow);
+}
+
+.feature-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+    color: white;
+}
+
+.feature-info p {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin: 0 !important;
+}
+
+.app-action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 15px;
+}
+
+.app-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.app-btn.playstore {
+    background: #111827;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.app-btn.playstore:hover {
+    background: #1f2937;
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.app-btn.privacy {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+}
+
+.app-btn.privacy:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+}
+
+/* Smartphone Mockup Frame Styling */
+.app-showcase-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-frame-container {
+    position: relative;
+    width: 290px;
+    height: 590px;
+    perspective: 1000px;
+}
+
+.phone-frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #18181b;
+    border: 12px solid #27272a;
+    border-radius: 40px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8),
+                inset 0 0 10px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Side button details for premium UI */
+.phone-frame::before {
+    content: '';
+    position: absolute;
+    top: 90px;
+    left: -15px;
+    width: 3px;
+    height: 40px;
+    background: #52525b;
+    border-radius: 3px 0 0 3px;
+    box-shadow: 0 50px 0 #52525b; /* second volume key */
+}
+
+.phone-frame::after {
+    content: '';
+    position: absolute;
+    top: 110px;
+    right: -15px;
+    width: 3px;
+    height: 65px;
+    background: #52525b;
+    border-radius: 0 3px 3px 0;
+}
+
+.phone-screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+}
+
+.phone-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 1;
+}
+
+.phone-screen img.loading {
+    opacity: 0;
+    transform: scale(0.98);
+}
+
+/* Dynamic Island/Notch */
+.dynamic-island {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85px;
+    height: 22px;
+    background: #000000;
+    border-radius: 12px;
+    z-index: 10;
+    box-shadow: inset 0 0 4px rgba(255,255,255,0.05);
+}
+
+.dynamic-island::after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    background: #111827;
+    border-radius: 50%;
+    box-shadow: inset 0 0 2px rgba(255,255,255,0.2);
+}
+
+/* Screen Gloss/Reflection Effect */
+.screen-gloss {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 60%);
+    pointer-events: none;
+    z-index: 5;
+}
+
 /* Responsive Overrides */
 @media (max-width: 600px) {
     header h1 {
@@ -678,5 +950,13 @@ footer {
     }
     .btn-group {
         justify-content: flex-end;
+    }
+    .phone-frame-container {
+        width: 250px;
+        height: 510px;
+    }
+    .app-action-buttons {
+        flex-direction: column;
+        align-items: stretch;
     }
 }

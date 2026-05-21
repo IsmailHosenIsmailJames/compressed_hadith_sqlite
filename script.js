@@ -236,6 +236,41 @@ function switchTab(tabId) {
     document.getElementById(tabId).classList.add('active');
 }
 
+// Switch App Showcase Screenshots with a smooth fade animation
+function switchAppScreenshot(tabName, imagePath, descriptionText) {
+    // 1. Update active classes on buttons
+    const buttons = document.querySelectorAll('.app-feature-item');
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Set active state on the clicked button
+    if (window.event && window.event.currentTarget) {
+        window.event.currentTarget.classList.add('active');
+    }
+
+    // 2. Animate and update active screenshot inside mock phone
+    const phoneImg = document.getElementById('active-phone-img');
+    if (phoneImg) {
+        // Trigger fade out
+        phoneImg.classList.add('loading');
+        
+        setTimeout(() => {
+            // Swap image src
+            phoneImg.src = imagePath;
+            
+            // Trigger fade in when loaded
+            if (phoneImg.complete) {
+                phoneImg.classList.remove('loading');
+            } else {
+                phoneImg.onload = () => {
+                    phoneImg.classList.remove('loading');
+                };
+            }
+        }, 250); // Match style.css transition timing nicely
+    }
+}
+
 // Bind selectors and inputs
 baseUrlInput.addEventListener('input', updateLinks);
 langSelect.addEventListener('change', populateBooks);

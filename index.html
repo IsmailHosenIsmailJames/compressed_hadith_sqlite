@@ -427,9 +427,112 @@ fun searchHadithOffline(dbPath: String, searchQuery: String): List<HadithResult>
         ))
     }
     cursor.close()
-    db.close()
-    return results
-}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Al Hadith Companion Mobile App Showcase -->
+        <section class="card app-showcase-section" id="mobile-app">
+            <div class="card-header">
+                <div class="step-num">5</div>
+                <h2>Al Hadith Companion Mobile App</h2>
+            </div>
+            <p class="subtitle">The complete offline reader powered directly by this Compressed SQLite Hadith API.</p>
+            
+            <div class="app-showcase-grid">
+                <!-- Left Column: Feature Selectors and Details -->
+                <div class="app-showcase-left">
+                    <p class="desc">
+                        Our companion mobile application provides a premium, user-facing experience for reading and searching Hadith collections. It features zero server dependencies, instant offline databases, and real-time local search capabilities.
+                    </p>
+                    
+                    <div class="app-feature-list">
+                        <!-- Feature Tab 1 (Active by default) -->
+                        <button class="app-feature-item active" onclick="switchAppScreenshot('hadith-reader', 'app_screenshots/image_hadith_list_view.png', 'Browse complete volumes and collections using a beautiful typography system customized for smooth readings in multiple languages.')">
+                            <div class="feature-icon-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Interactive Hadith Reader</h4>
+                                <p>Browse entire collections offline with gorgeous localized script fonts.</p>
+                            </div>
+                        </button>
+
+                        <!-- Feature Tab 2 -->
+                        <button class="app-feature-item" onclick="switchAppScreenshot('fts-search', 'app_screenshots/image_search.png', 'Harness the full power of pre-compiled FTS5 tables to search for keywords across multiple books in less than 5 milliseconds.')">
+                            <div class="feature-icon-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Offline FTS5 Keywords Search</h4>
+                                <p>Perform instant local search across millions of records without using mobile data.</p>
+                            </div>
+                        </button>
+
+                        <!-- Feature Tab 3 -->
+                        <button class="app-feature-item" onclick="switchAppScreenshot('resource-mgr', 'app_screenshots/image_resources_manager.png', 'Manage, download, and verify ZIP compressed SQLite databases for Sahih al-Bukhari, Sahih Muslim, and other editions.')">
+                            <div class="feature-icon-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="17 8 12 3 7 8"></polyline>
+                                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                                </svg>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Database Resource Manager</h4>
+                                <p>Seamlessly download and verify compressed resources dynamically.</p>
+                            </div>
+                        </button>
+
+                        <!-- Feature Tab 4 -->
+                        <button class="app-feature-item" onclick="switchAppScreenshot('cloud-sync', 'app_screenshots/image_home_page_collection_bookmark_tab.png', 'Keep your favorite Hadiths, highlights, and custom study notes in sync across multiple mobile devices using optional secure Cloud Sync.')">
+                            <div class="feature-icon-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21.2 15c.7-1.2 1-2.5.7-3.9-.3-2-1.9-3.6-3.9-3.9C16.1 7 14.8 7.3 13.6 8 13 6.1 11.3 4.7 9.3 4.2 6.8 3.6 4.3 5.2 3.6 7.7c-.5 1.7-.1 3.6.9 5C3.3 14 2 15.8 2 18v2h20v-2c0-1.2-.6-2.3-1.6-3z"></path>
+                                </svg>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Personal Bookmarks & Cloud Sync</h4>
+                                <p>Synchronize your bookmarks and annotations securely via Google Sign-In.</p>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Call To Action & Privacy Link -->
+                    <div class="app-action-buttons">
+                        <a href="https://play.google.com/store" target="_blank" class="app-btn playstore">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3 5.277c0-.285.074-.539.206-.763l10.551 10.552-10.55-10.55c.097.288.136.634.136 1.053v12.825c0 .419.039.765.136 1.053l10.55-10.551L3.206 20.485c-.132-.223-.206-.477-.206-.762V5.277zm11.758 6.723L4.208 21.55c.348.199.79.288 1.288.243l11.748-6.737-2.486-2.779zm6.035-1.129l-3.324-1.905-2.71 3.033 2.71 3.033 3.324-1.905c1.077-.618 1.077-1.638 0-2.256zm-6.035-1.128l2.486-2.779L5.496 2.207C4.998 2.162 4.556 2.251 4.208 2.45l10.55 10.552z"/>
+                            </svg>
+                            Google Play Store
+                        </a>
+                        <a href="privacy.html" class="app-btn privacy">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            Privacy Policy
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Smartphone Mockup with Active Image -->
+                <div class="app-showcase-right">
+                    <div class="phone-frame-container">
+                        <div class="phone-frame">
+                            <div class="dynamic-island"></div>
+                            <div class="screen-gloss"></div>
+                            <div class="phone-screen">
+                                <img src="app_screenshots/image_hadith_list_view.png" id="active-phone-img" alt="Al Hadith App Screenshot">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -438,6 +541,11 @@ fun searchHadithOffline(dbPath: String, searchQuery: String): List<HadithResult>
     <footer>
         <div class="container">
             <p>Static API server ready. Built with ❤️ for the global Ummah.</p>
+            <div class="footer-nav">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="#configurator">Interactive Playground</a>
+                <a href="privacy.html#data-deletion">Request Data Deletion</a>
+            </div>
         </div>
     </footer>
 

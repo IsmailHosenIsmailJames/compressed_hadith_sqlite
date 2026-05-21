@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Al Hadith App</title>
+    <meta name="description" content="Privacy Policy for the Al Hadith offline-ready, statically-powered mobile application. Disclosing data practices, Google Play Console compliance, and permissions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px 100px;
+        }
+        
+        .back-btn-wrap {
+            margin-bottom: 30px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            padding: 8px 16px;
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            border-radius: 100px;
+        }
+
+        .back-link:hover {
+            color: var(--primary-hover);
+            background: rgba(16, 185, 129, 0.15);
+            transform: translateX(-4px);
+        }
+
+        .privacy-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 45px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .privacy-header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 30px;
+            margin-bottom: 35px;
+        }
+
+        .privacy-header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #ffffff 40%, #a7f3d0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .last-updated {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px var(--primary);
+        }
+
+        .privacy-toc {
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 40px;
+        }
+
+        .privacy-toc h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px;
+        }
+
+        .toc-link {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toc-link::before {
+            content: "→";
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .toc-link:hover {
+            color: var(--primary-hover);
+        }
+
+        .privacy-section {
+            margin-bottom: 40px;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-left: 3px solid var(--primary);
+            padding-left: 12px;
+        }
+
+        .privacy-section p {
+            color: var(--text-dim);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .privacy-section ul {
+            color: var(--text-dim);
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .privacy-section li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: rgba(59, 130, 246, 0.05);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box p {
+            color: #cbd5e1;
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .service-badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .service-badge {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .service-badge.primary {
+            border-color: rgba(16, 185, 129, 0.2);
+            background: rgba(16, 185, 129, 0.04);
+            color: var(--primary);
+        }
+
+        .data-deletion-card {
+            background: rgba(239, 68, 68, 0.03);
+            border: 1px solid rgba(239, 68, 68, 0.15);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 30px;
+        }
+
+        .data-deletion-card h3 {
+            color: #f87171;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .privacy-card {
+                padding: 25px;
+            }
+            .privacy-header h1 {
+                font-size: 2.0rem;
+            }
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <div class="glass-bg"></div>
+
+    <div class="privacy-container">
+        <div class="back-btn-wrap">
+            <a href="index.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to API Documentation
+            </a>
+        </div>
+
+        <main class="privacy-card">
+            <div class="privacy-header">
+                <h1>Privacy Policy</h1>
+                <div class="last-updated">
+                    <span class="pulse-dot"></span>
+                    <span>Last Updated: May 21, 2026</span>
+                </div>
+            </div>
+
+            <p class="subtitle" style="font-size: 1.1rem; margin-bottom: 30px;">
+                This privacy policy governs your use of the mobile software application <strong>Al Hadith</strong> ("Application") built by the developer team for mobile devices.
+            </p>
+
+            <div class="privacy-toc">
+                <h3>Table of Contents</h3>
+                <div class="toc-grid">
+                    <a href="#overview" class="toc-link">1. Overview & Offline Core</a>
+                    <a href="#info-collection" class="toc-link">2. Information Collection</a>
+                    <a href="#third-party" class="toc-link">3. Third-Party Disclosures</a>
+                    <a href="#permissions" class="toc-link">4. Device Permissions</a>
+                    <a href="#data-deletion" class="toc-link">5. Data Deletion Rights</a>
+                    <a href="#children" class="toc-link">6. Children's Privacy</a>
+                    <a href="#security" class="toc-link">7. Security Standards</a>
+                    <a href="#contact" class="toc-link">8. Contact Information</a>
+                </div>
+            </div>
+
+            <!-- Section 1 -->
+            <section id="overview" class="privacy-section">
+                <h2>1. Overview & Offline-First Core</h2>
+                <p>
+                    The <strong>Al Hadith</strong> mobile application is built as an offline-first reference tool to download, browse, and search verified Hadith collections. The core functionalities of the Application—such as reading, exploring chapters, offline search, and navigation—operate entirely locally on your mobile device.
+                </p>
+                <div class="highlight-box">
+                    <p>
+                        <strong>Zero Data Collection by Default:</strong> We believe in absolute user privacy. If you use the Application solely in its default offline state without logging in, absolutely no personally identifiable information (PII) is uploaded, tracked, or collected by us.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="info-collection" class="privacy-section">
+                <h2>2. Information Collection & Cloud Sync</h2>
+                <p>
+                    To enhance your user experience, the Application offers an optional <strong>Cloud Synchronization</strong> feature. This service allows you to sync your custom bookmarks, highlights, notes, and reading progress across multiple devices.
+                </p>
+                <p>
+                    If you choose to enable Cloud Synchronization, the following information is securely processed:
+                </p>
+                <ul>
+                    <li><strong>Authentication Data:</strong> When you register or sign in, we process your account credentials (such as your name, email address, and profile picture). This is conducted via Google Sign-In or secure Firebase authentication methods.</li>
+                    <li><strong>User Saved Sync Data:</strong> We store your bookmarks, reading logs, and preferences to reflect them on your other synchronized devices.</li>
+                    <li><strong>Strict Usage Boundary:</strong> This authentication and sync data is stored securely in Firebase cloud servers. We do not sell, rent, license, or share this data with any third-party marketing networks under any circumstances.</li>
+                </ul>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="third-party" class="privacy-section">
+                <h2>3. Third-Party Disclosures & Integrations</h2>
+                <p>
+                    To facilitate core features (such as user authentication, data synchronization, push notifications, and app updates), the Application integrates certain standard SDKs provided by third-party suppliers. These platforms comply with rigorous data protection frameworks:
+                </p>
+                
+                <div class="service-badge-grid">
+                    <div class="service-badge primary">Google Play Services</div>
+                    <div class="service-badge">Firebase Authentication</div>
+                    <div class="service-badge">Firebase Realtime Database</div>
+                    <div class="service-badge">Google Sign-In API</div>
+                    <div class="service-badge">Firebase Cloud Messaging (FCM)</div>
+                </div>
+
+                <p>
+                    These third-party platforms have their own independent privacy policies governing how they handle data. You may review their terms here:
+                </p>
+                <ul>
+                    <li><a href="https://policies.google.com/privacy" target="_blank" style="color: var(--primary); text-decoration: none;">Google Privacy & Terms</a></li>
+                    <li><a href="https://firebase.google.com/support/privacy" target="_blank" style="color: var(--primary); text-decoration: none;">Firebase Security and Privacy Standards</a></li>
+                </ul>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="permissions" class="privacy-section">
+                <h2>4. Device Permissions</h2>
+                <p>
+                    For the Application to successfully perform its duties, your operating system will request permission to access certain native features. We only request permissions that are absolutely critical:
+                </p>
+                <ul>
+                    <li><strong>Network & Internet Access (INTERNET):</strong> Required to fetch and download compressed Hadith databases (.sqlite.zip files), synchronize your bookmarked data, authenticate your cloud account, and receive FCM notification payloads.</li>
+                    <li><strong>Device Local Storage (WRITE_EXTERNAL_STORAGE / READ_EXTERNAL_STORAGE):</strong> Required solely to extract, write, and read the high-performance local SQLite database files on your local drive to enable full offline support.</li>
+                    <li><strong>Push Notification Permissions:</strong> Required if you opt in to receive daily Hadith verses, reminders, and system alerts. You can disable notifications at any time in your OS Settings.</li>
+                    <li><strong>Wake Lock Permission (WAKELOCK):</strong> Prevents your screen from sleeping while you are actively reading long Islamic texts.</li>
+                </ul>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="data-deletion" class="privacy-section">
+                <h2>5. Account & Sync Data Deletion Rights</h2>
+                <p>
+                    In accordance with global data protection laws (such as GDPR, CCPA, and Google Play developer requirements), we provide complete control over your personal data.
+                </p>
+                
+                <div class="data-deletion-card">
+                    <h3>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                            <line x1="10" y1="11" x2="10" y2="17"></line>
+                            <line x1="14" y1="11" x2="14" y2="17"></line>
+                        </svg>
+                        How to Permanently Delete Your Data
+                    </h3>
+                    <p>
+                        You can purge all your account information, authentication records, and cloud-synced data at any time:
+                    </p>
+                    <ol style="color: var(--text-dim); padding-left: 20px; margin-top: 10px;">
+                        <li style="margin-bottom: 8px;"><strong>In-App Direct Purge:</strong> Go to the Application settings dashboard, tap on "Account Settings" or "Profile", and select the "Delete My Sync Account" option. This will instantaneously and permanently erase all bookmarks, authentication links, and database backups from our Firebase Cloud.</li>
+                        <li style="margin-bottom: 8px;"><strong>Email Support Request:</strong> Alternatively, you can email our support desk at <strong style="color: white;">hadith.sqlite.api@gmail.com</strong> with your registered email, and our systems team will execute a complete data sweep within 48 business hours.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Section 6 -->
+            <section id="children" class="privacy-section">
+                <h2>6. Children's Privacy</h2>
+                <p>
+                    Our services do not target children under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If we discover that a child under 13 has provided us with personal information, we will immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we can take necessary actions.
+                </p>
+            </section>
+
+            <!-- Section 7 -->
+            <section id="security" class="privacy-section">
+                <h2>7. Security Standards</h2>
+                <p>
+                    We value your trust in providing us your synchronization metadata. We use secure cloud connections (HTTPS/SSL), enterprise authentication schemes, and encrypted data transfer channels to prevent unauthorized access or alteration. However, please remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute safety.
+                </p>
+            </section>
+
+            <!-- Section 8 -->
+            <section id="contact" class="privacy-section">
+                <h2>8. Contact & Policy Updates</h2>
+                <p>
+                    We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.
+                </p>
+                <p style="margin-top: 25px;">
+                    If you have any questions, suggestions, or concerns regarding our privacy practices, please contact us at:
+                </p>
+                <p style="font-family: 'JetBrains Mono', Courier, monospace; font-size: 1.05rem; color: var(--primary);">
+                    hadith.sqlite.api@gmail.com
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Al Hadith App Support &copy; 2026. Built with ❤️ for the global Ummah.</p>
+        </div>
+    </footer>
+</body>
+</html>
