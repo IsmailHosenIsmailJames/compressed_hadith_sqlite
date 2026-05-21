@@ -42,7 +42,7 @@ body {
     width: 100%;
     height: 100%;
     background: radial-gradient(ellipse at 80% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 20% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+        radial-gradient(ellipse at 20% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
     pointer-events: none;
     z-index: -1;
 }
@@ -200,7 +200,8 @@ h2 {
     color: var(--text-dim);
 }
 
-input[type="text"], select {
+input[type="text"],
+select {
     background: rgba(0, 0, 0, 0.35);
     border: 1px solid var(--border);
     padding: 14px 18px;
@@ -213,7 +214,8 @@ input[type="text"], select {
     width: 100%;
 }
 
-input[type="text"]:focus, select:focus {
+input[type="text"]:focus,
+select:focus {
     border-color: var(--primary);
     box-shadow: 0 0 0 3px var(--primary-glow);
     background: rgba(0, 0, 0, 0.5);
@@ -327,7 +329,8 @@ select option {
 }
 
 /* Buttons */
-.action-btn, .copy-btn {
+.action-btn,
+.copy-btn {
     font-family: inherit;
     border: none;
     padding: 8px 16px;
@@ -411,9 +414,17 @@ select option {
     border-radius: 50%;
 }
 
-.dot-red { background-color: var(--red); }
-.dot-yellow { background-color: var(--yellow); }
-.dot-green { background-color: var(--green); }
+.dot-red {
+    background-color: var(--red);
+}
+
+.dot-yellow {
+    background-color: var(--yellow);
+}
+
+.dot-green {
+    background-color: var(--green);
+}
 
 .console-title {
     font-size: 0.85rem;
@@ -535,16 +546,32 @@ select option {
     border-radius: 4px;
 }
 
-.badge-mini.text-green { background: rgba(16, 185, 129, 0.1); color: var(--green); }
-.badge-mini.text-blue { background: rgba(59, 130, 246, 0.1); color: var(--blue); }
-.badge-mini.text-purple { background: rgba(139, 92, 246, 0.1); color: var(--purple); }
-.badge-mini.text-yellow { background: rgba(245, 158, 11, 0.1); color: var(--yellow); }
+.badge-mini.text-green {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--green);
+}
+
+.badge-mini.text-blue {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--blue);
+}
+
+.badge-mini.text-purple {
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--purple);
+}
+
+.badge-mini.text-yellow {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--yellow);
+}
 
 .schema-table-body {
     padding: 10px 20px;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.8rem;
-    max-height: 50px; /* Collapsed by default */
+    max-height: 50px;
+    /* Collapsed by default */
     overflow: hidden;
     transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -586,7 +613,8 @@ select option {
     font-weight: 700;
 }
 
-.col-key:contains("PK"), .col-key {
+.col-key:contains("PK"),
+.col-key {
     color: var(--primary);
 }
 
@@ -711,66 +739,83 @@ footer {
     line-height: 1.6;
 }
 
-.app-feature-list {
+.app-feature-groups {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 20px;
+}
+
+.feature-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.group-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: var(--primary);
+    opacity: 0.95;
+    text-transform: uppercase;
+}
+
+.group-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    box-shadow: 0 0 8px var(--primary-glow);
+    display: inline-block;
+}
+
+.group-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .app-feature-item {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 16px 20px;
+    border-radius: 8px;
+    padding: 8px 14px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 8px;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: left;
+    color: var(--text-dim);
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 
 .app-feature-item:hover {
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.15);
-    transform: translateX(5px);
+    color: white;
+    transform: translateY(-1px);
 }
 
 .app-feature-item.active {
-    background: rgba(16, 185, 129, 0.06);
-    border-color: rgba(16, 185, 129, 0.3);
-    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.05);
-}
-
-.feature-icon-wrapper {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    transition: all 0.3s ease;
-}
-
-.app-feature-item.active .feature-icon-wrapper {
-    background: var(--primary);
+    background: rgba(16, 185, 129, 0.08);
+    border-color: rgba(16, 185, 129, 0.4);
     color: white;
-    box-shadow: 0 0 12px var(--primary-glow);
-}
-
-.feature-info h4 {
-    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.08);
     font-weight: 600;
-    margin-bottom: 2px;
-    color: white;
 }
 
-.feature-info p {
-    font-size: 0.85rem;
-    color: var(--text-dim);
-    margin: 0 !important;
+.app-feature-item .btn-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: bold;
+    color: var(--primary);
+    opacity: 0.8;
 }
 
 .app-action-buttons {
@@ -820,68 +865,38 @@ footer {
     box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
 }
 
-/* Smartphone Mockup Frame Styling */
+/* Clean Screenshot Display Styling */
 .app-showcase-right {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.phone-frame-container {
+.screenshot-frame-container {
     position: relative;
     width: 290px;
-    height: 590px;
+    height: 612px;
     perspective: 1000px;
 }
 
-.phone-frame {
+.screenshot-frame {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #18181b;
-    border: 12px solid #27272a;
-    border-radius: 40px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8),
-                inset 0 0 10px rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
 }
 
-/* Side button details for premium UI */
-.phone-frame::before {
-    content: '';
-    position: absolute;
-    top: 90px;
-    left: -15px;
-    width: 3px;
-    height: 40px;
-    background: #52525b;
-    border-radius: 3px 0 0 3px;
-    box-shadow: 0 50px 0 #52525b; /* second volume key */
+.screenshot-frame:hover {
+    border-color: var(--primary);
+    box-shadow: 0 25px 60px rgba(16, 185, 129, 0.1), 0 0 0 1px rgba(16, 185, 129, 0.2);
 }
 
-.phone-frame::after {
-    content: '';
-    position: absolute;
-    top: 110px;
-    right: -15px;
-    width: 3px;
-    height: 65px;
-    background: #52525b;
-    border-radius: 0 3px 3px 0;
-}
-
-.phone-screen {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    overflow: hidden;
-}
-
-.phone-screen img {
+.screenshot-frame img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -889,47 +904,9 @@ footer {
     opacity: 1;
 }
 
-.phone-screen img.loading {
+.screenshot-frame img.loading {
     opacity: 0;
     transform: scale(0.98);
-}
-
-/* Dynamic Island/Notch */
-.dynamic-island {
-    position: absolute;
-    top: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 85px;
-    height: 22px;
-    background: #000000;
-    border-radius: 12px;
-    z-index: 10;
-    box-shadow: inset 0 0 4px rgba(255,255,255,0.05);
-}
-
-.dynamic-island::after {
-    content: '';
-    position: absolute;
-    right: 15px;
-    top: 7px;
-    width: 8px;
-    height: 8px;
-    background: #111827;
-    border-radius: 50%;
-    box-shadow: inset 0 0 2px rgba(255,255,255,0.2);
-}
-
-/* Screen Gloss/Reflection Effect */
-.screen-gloss {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 60%);
-    pointer-events: none;
-    z-index: 5;
 }
 
 /* Responsive Overrides */
@@ -937,24 +914,30 @@ footer {
     header h1 {
         font-size: 2.3rem;
     }
+
     .badge {
         font-size: 0.75rem;
         padding: 4px 12px;
     }
+
     .card {
         padding: 20px;
     }
+
     .url-bar {
         flex-direction: column;
         align-items: stretch;
     }
+
     .btn-group {
         justify-content: flex-end;
     }
-    .phone-frame-container {
+
+    .screenshot-frame-container {
         width: 250px;
-        height: 510px;
+        height: 500px;
     }
+
     .app-action-buttons {
         flex-direction: column;
         align-items: stretch;
