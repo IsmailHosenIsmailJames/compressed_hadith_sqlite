@@ -4,102 +4,112 @@
         {
             "book": "eng-abudawud",
             "name": "Sunan Abu Dawud",
+            "name_native": "Sunan Abu Dawud",
             "hadith_count": 5274,
             "section_count": 43,
-            "checksum": "8fb7ee1bc1b01e080de9410f4b69e342f5b96369121844efcf3399fe6da57130",
+            "checksum": "0fb823c9752b5e54ce0f22e7cecc043b6ba3b6798e26a843ce2fd101e9515c8d",
             "zip_path": "eng/eng-abudawud.sqlite.zip",
             "file_size": 4452352,
-            "zip_size": 1857029
+            "zip_size": 1886151
         },
         {
             "book": "eng-bukhari",
             "name": "Sahih al Bukhari",
+            "name_native": "Sahih al-Bukhari",
             "hadith_count": 7278,
             "section_count": 97,
-            "checksum": "ab24dfb5556ee906cd01c4ff218eff2533af933b2e34dade4ccb76d0b871b400",
+            "checksum": "2bdffa26dfa30d77123256d947cf4c2da2acc092376c55409f9b4407b1013035",
             "zip_path": "eng/eng-bukhari.sqlite.zip",
-            "file_size": 6524928,
-            "zip_size": 2807405
+            "file_size": 6533120,
+            "zip_size": 2827989
         },
         {
             "book": "eng-dehlawi",
             "name": "Forty Hadith of Shah Waliullah Dehlawi",
+            "name_native": "Forty Hadith of Shah Waliullah Dehlawi",
             "hadith_count": 40,
             "section_count": 1,
-            "checksum": "3813095bdbd1f79a91b586440b4504787206cb9d8e86ab0276671d1b5fc57d81",
+            "checksum": "185f5ceb1bbd68e8346e13aa5ef2e2ba50c0f4faf87726accd3711540f86a616",
             "zip_path": "eng/eng-dehlawi.sqlite.zip",
             "file_size": 49152,
-            "zip_size": 4908
+            "zip_size": 4936
         },
         {
             "book": "eng-ibnmajah",
             "name": "Sunan Ibn Majah",
+            "name_native": "Sunan Ibn Majah",
             "hadith_count": 4077,
             "section_count": 37,
-            "checksum": "1bbe11fd7b8db3ec573b42b453737defd4250f3abd951ebb714916c5c088ca89",
+            "checksum": "c9c7bab3a70f43df924fb3e82799f9d50195efbc36b1450fa3720d14aea0e351",
             "zip_path": "eng/eng-ibnmajah.sqlite.zip",
             "file_size": 2904064,
-            "zip_size": 1170310
+            "zip_size": 1192524
         },
         {
             "book": "eng-malik",
             "name": "Muwatta Malik",
+            "name_native": "Muwatta Malik",
             "hadith_count": 1840,
             "section_count": 61,
-            "checksum": "e035b83d38bb5067daa5f7d87c49019dd0953d3b6477fc1dc515e77bdd99ecc7",
+            "checksum": "24e9de99c00e6161d2370900229f89d205fa7592aabf54ef4fdc11b19a702c12",
             "zip_path": "eng/eng-malik.sqlite.zip",
             "file_size": 2158592,
-            "zip_size": 835959
+            "zip_size": 839748
         },
         {
             "book": "eng-muslim",
             "name": "Sahih Muslim",
+            "name_native": "Sahih Muslim",
             "hadith_count": 7219,
             "section_count": 56,
-            "checksum": "e690752e9bc357f4b4a60308a9e4c10508f93371e81c69e2a81245e2fc3956e2",
+            "checksum": "62a0d5a51eef551d5e4a9825bfd42d4a1909789d72d822014f712bace92db916",
             "zip_path": "eng/eng-muslim.sqlite.zip",
             "file_size": 5394432,
-            "zip_size": 2148108
+            "zip_size": 2160931
         },
         {
             "book": "eng-nasai",
             "name": "Sunan an Nasai",
+            "name_native": "Sunan an-Nasai",
             "hadith_count": 5683,
             "section_count": 51,
-            "checksum": "891507932e67c5bdf82e2afb6f616ff5501295dc26fd67897537569f5ff19ef0",
+            "checksum": "a836a467b06aba57e5665bf5a6cc7690b636766e30fe4e173f4d704f449318e2",
             "zip_path": "eng/eng-nasai.sqlite.zip",
             "file_size": 4038656,
-            "zip_size": 1568515
+            "zip_size": 1593528
         },
         {
             "book": "eng-nawawi",
             "name": "Forty Hadith of an-Nawawi",
+            "name_native": "Forty Hadith of an-Nawawi",
             "hadith_count": 42,
             "section_count": 1,
-            "checksum": "27ffa9f7447e29c7bb32d8e095dff316328df85cdfddaa248f60904128441f55",
+            "checksum": "afce2f79a58347e16429088a46b9a16ed31bd8819b03b41ed0557c01725c1494",
             "zip_path": "eng/eng-nawawi.sqlite.zip",
             "file_size": 106496,
-            "zip_size": 28395
+            "zip_size": 28516
         },
         {
             "book": "eng-qudsi",
             "name": "Forty Hadith Qudsi",
+            "name_native": "Forty Hadith Qudsi",
             "hadith_count": 40,
             "section_count": 1,
-            "checksum": "d2902d040f27fbe6c9ac0ecacb7988f0e7a9d669e87ef49e3417507840598ada",
+            "checksum": "912bca9f9df97c8ca53f0716a144f88fada51d8d917d4cdb07990c1755e1924d",
             "zip_path": "eng/eng-qudsi.sqlite.zip",
             "file_size": 118784,
-            "zip_size": 31467
+            "zip_size": 31604
         },
         {
             "book": "eng-tirmidhi",
             "name": "Jami At Tirmidhi",
+            "name_native": "Jami At-Tirmidhi",
             "hadith_count": 3998,
             "section_count": 49,
-            "checksum": "c2d6593132a4d39094d0e442f0bb2d712b060ab5d24bf5bbe480b770a4a5c624",
+            "checksum": "e024bf2c1f5d6783a2007bcd5f29d3db072c7052ee013b8f35e9d7eb34554d21",
             "zip_path": "eng/eng-tirmidhi.sqlite.zip",
             "file_size": 3207168,
-            "zip_size": 1343408
+            "zip_size": 1361813
         }
     ]
 }

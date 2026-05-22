@@ -4,82 +4,90 @@
         {
             "book": "ben-abudawud",
             "name": "Sunan Abu Dawud",
+            "name_native": "সুনান আবু দাউদ",
             "hadith_count": 5274,
             "section_count": 43,
-            "checksum": "58b55bb8cc70f9fc6a4fa3b15c64e99d2529a47aa32159b18c9b04814e8d5865",
+            "checksum": "79f73183d19ca1e5bfcbeda50f6964f4f28d5c82c153cdf7961f09669d787247",
             "zip_path": "ben/ben-abudawud.sqlite.zip",
-            "file_size": 10092544,
-            "zip_size": 2506398
+            "file_size": 10100736,
+            "zip_size": 2509494
         },
         {
             "book": "ben-bukhari",
             "name": "Sahih al Bukhari",
+            "name_native": "সহীহ আল-বুখারী",
             "hadith_count": 7278,
             "section_count": 97,
-            "checksum": "1d8cf25cf4ff37bf0f3ff3d8efa53bc02a1c4bee73b1353eaddad664d7697db1",
+            "checksum": "dd66bb1dfa859d67115dea0fb74126a2758f91da90ad6251ac013a3e6bef4b13",
             "zip_path": "ben/ben-bukhari.sqlite.zip",
-            "file_size": 20152320,
-            "zip_size": 5183185
+            "file_size": 20164608,
+            "zip_size": 5177035
         },
         {
             "book": "ben-ibnmajah",
             "name": "Sunan Ibn Majah",
+            "name_native": "সুনান ইবনে মাজাহ",
             "hadith_count": 4077,
             "section_count": 37,
-            "checksum": "4ca61baee038d954f7f84cdc65b97c99f9b1abaa72ad0bfe70937a50e791598d",
+            "checksum": "d518aaa7c6e7b3f53f59e2a36c5e08bae83a813ed628889bbc220b3a4dea80d7",
             "zip_path": "ben/ben-ibnmajah.sqlite.zip",
             "file_size": 6225920,
-            "zip_size": 1513479
+            "zip_size": 1521329
         },
         {
             "book": "ben-malik",
             "name": "Muwatta Malik",
+            "name_native": "মুয়াত্তা মালিক",
             "hadith_count": 1840,
             "section_count": 61,
-            "checksum": "67eb3c9db79cb6ef573d6ad108d41c80471831303023b14c6f00ab95fb8b39c0",
+            "checksum": "5e528e520a42a659a28668a370dadfe1ad82d244ab9ec17c35733f26985f8f6b",
             "zip_path": "ben/ben-malik.sqlite.zip",
-            "file_size": 4026368,
-            "zip_size": 992466
+            "file_size": 4034560,
+            "zip_size": 991978
         },
         {
             "book": "ben-muslim",
             "name": "Sahih Muslim",
+            "name_native": "সহীহ মুসলিম",
             "hadith_count": 7219,
             "section_count": 56,
-            "checksum": "5ae6f1a0ede9a761e24d4c8f11a3f56aeabba1313a28080fd4d9241844bd637c",
+            "checksum": "b21411934ca374e534c92ca0d96143570fa9157536f2ad50dba0307b7896d02c",
             "zip_path": "ben/ben-muslim.sqlite.zip",
-            "file_size": 14848000,
-            "zip_size": 3467601
+            "file_size": 14856192,
+            "zip_size": 3459400
         },
         {
             "book": "ben-nasai",
             "name": "Sunan an Nasai",
+            "name_native": "সুনান আন-নাসায়ী",
             "hadith_count": 5683,
             "section_count": 51,
-            "checksum": "231a592ea0433e14f1c8bea8f36dd25adbd15a71e51ba554151ce94fc4a80919",
+            "checksum": "795d7a77abbe290c4eaec88db2394dd51d6912d38b7ff19b110c1ad6f75f71ed",
             "zip_path": "ben/ben-nasai.sqlite.zip",
-            "file_size": 9695232,
-            "zip_size": 2254190
+            "file_size": 9703424,
+            "zip_size": 2255459
         },
         {
             "book": "ben-nawawi",
             "name": "Forty Hadith of an-Nawawi",
+            "name_native": "চল্লিশ হাদিস (আন-নববী)",
             "hadith_count": 42,
             "section_count": 1,
-            "checksum": "02718c29e624b10378cb11829a421d70515456920ef4ec5a5bdd29f5dd12b8b1",
+            "checksum": "4d4c21cb37b8e479ba8383596dc4279fd397984ab0fc42990986efd242e91b12",
             "zip_path": "ben/ben-nawawi.sqlite.zip",
             "file_size": 151552,
-            "zip_size": 31439
+            "zip_size": 31478
         },
         {
             "book": "ben-tirmidhi",
             "name": "Jami At Tirmidhi",
+            "name_native": "জামি আত-তিরমিজি",
             "hadith_count": 3998,
             "section_count": 49,
-            "checksum": "1c73f369211cd4b66fc5928d9e814bd5407b58d91ce6a7c8b21dc1382b711518",
+            "checksum": "0d42c9395728b599f12261a29a59fc1ee545202753a8c00aeb59a0d429f8a9fb",
             "zip_path": "ben/ben-tirmidhi.sqlite.zip",
-            "file_size": 11489280,
-            "zip_size": 2735141
+            "file_size": 11497472,
+            "zip_size": 2733027
         }
     ]
 }

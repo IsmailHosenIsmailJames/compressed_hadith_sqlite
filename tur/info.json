@@ -4,72 +4,90 @@
         {
             "book": "tur-abudawud",
             "name": "Sunan Abu Dawud",
+            "name_native": "Sünen-i Ebu Davud",
             "hadith_count": 5274,
             "section_count": 43,
-            "checksum": "710b0d57a4302a7fef9729572ff11c62c08c67254c0885d132824ec86dca8db8",
+            "checksum": "18a2afb0f21d890830124187b9d208cad7690f73e85d1fabcffd3c997814e4d7",
             "zip_path": "tur/tur-abudawud.sqlite.zip",
             "file_size": 6074368,
-            "zip_size": 2365107
+            "zip_size": 2394670
         },
         {
             "book": "tur-bukhari",
             "name": "Sahih al Bukhari",
+            "name_native": "Sahih-i Buhari",
             "hadith_count": 7278,
             "section_count": 97,
-            "checksum": "64d2952c777cff75237f061be59d71b2ea1adedec1803272349b586224006e4d",
+            "checksum": "44de3f169c7f662f78fbaddf3f8f51314b107b7174b965f59ead484e612147d3",
             "zip_path": "tur/tur-bukhari.sqlite.zip",
-            "file_size": 15847424,
-            "zip_size": 6450706
+            "file_size": 15855616,
+            "zip_size": 6495115
         },
         {
             "book": "tur-ibnmajah",
             "name": "Sunan Ibn Majah",
+            "name_native": "Sünen-i İbn Mace",
             "hadith_count": 4077,
             "section_count": 37,
-            "checksum": "c22dde358f3e3e1d9a85f9e816e9577275cf92490ef22ddf5c0f43008c1ad7f6",
+            "checksum": "f33ca5e47837f4de6a73c3f2b1e7a9647bee7dba94ded2cf79bbe40fa6bf6ba8",
             "zip_path": "tur/tur-ibnmajah.sqlite.zip",
             "file_size": 6012928,
-            "zip_size": 2500535
+            "zip_size": 2528493
         },
         {
             "book": "tur-malik",
             "name": "Muwatta Malik",
+            "name_native": "Muvatta Malik",
             "hadith_count": 1840,
             "section_count": 61,
-            "checksum": "42e8b342d0079d61af36274aa71bf3a9d0540a7036e7c9db3b6b12521f5031e0",
+            "checksum": "0f5e87aa301a4cc8b7d0c02b4314f072de2487a0beb72d18e0370aec57e9d05e",
             "zip_path": "tur/tur-malik.sqlite.zip",
             "file_size": 1261568,
-            "zip_size": 552362
+            "zip_size": 556677
         },
         {
             "book": "tur-muslim",
             "name": "Sahih Muslim",
+            "name_native": "Sahih-i Müslim",
             "hadith_count": 7219,
             "section_count": 56,
-            "checksum": "b9691d07768b84e1d9af4f9a19f02440852e02367322d5220f65e7dd14d6ca48",
+            "checksum": "7c3df3dc0634ebb33b36c4e1fc11c4560742d287bf33ba5fba8829f997ea5e80",
             "zip_path": "tur/tur-muslim.sqlite.zip",
-            "file_size": 9609216,
-            "zip_size": 3922143
+            "file_size": 9617408,
+            "zip_size": 3941024
         },
         {
             "book": "tur-nasai",
             "name": "Sunan an Nasai",
+            "name_native": "Sünen-i Nesai",
             "hadith_count": 5683,
             "section_count": 51,
-            "checksum": "ba833a5d1a26d2208fc1ac98680c1c2374166ccb4bc820dc6d0dfe2d12c48a78",
+            "checksum": "20454f6d093b71b345a1aebc0df88cfeb80eb654ea7ebef4c76d56e2f82377e3",
             "zip_path": "tur/tur-nasai.sqlite.zip",
             "file_size": 1183744,
-            "zip_size": 421059
+            "zip_size": 431115
         },
         {
             "book": "tur-tirmidhi",
             "name": "Jami At Tirmidhi",
+            "name_native": "Sünen-i Tirmizi",
             "hadith_count": 3998,
             "section_count": 49,
-            "checksum": "15ca9c5458567d7fd8b467cd2336345784ddf929a59d0afed6079b299ce95b70",
+            "checksum": "8bfe2e4baa85bc75874843fab58d54d1a9e73525f78333f0cd2e294cdbd593cd",
             "zip_path": "tur/tur-tirmidhi.sqlite.zip",
             "file_size": 4911104,
-            "zip_size": 1960214
+            "zip_size": 1978321
+        },
+        {
+            "book": "tur-nawawi",
+            "name": "Forty Hadith of an-Nawawi",
+            "name_native": "İmam Nevevi'nin Kırk Hadisi",
+            "hadith_count": 42,
+            "section_count": 1,
+            "checksum": "9aedc6b1fb6ef5f9518aadd63636d16cf75cacd28349fee512ad161fc92dd870",
+            "zip_path": "tur/tur-nawawi.sqlite.zip",
+            "file_size": 94208,
+            "zip_size": 22769
         }
     ]
 }

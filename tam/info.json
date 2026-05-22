@@ -4,22 +4,24 @@
         {
             "book": "tam-bukhari",
             "name": "Sahih al Bukhari",
+            "name_native": "ஸஹீஹ் அல் புகாரி",
             "hadith_count": 7278,
             "section_count": 97,
-            "checksum": "94b516e156334063a80b77d0105eba1bf43e4ee8f45aea5855a652816ae2aeb4",
+            "checksum": "8745148e951750d04cde24a143e31256e59ed87deb484c82fb073419551dfb8c",
             "zip_path": "tam/tam-bukhari.sqlite.zip",
-            "file_size": 21823488,
-            "zip_size": 4802328
+            "file_size": 21835776,
+            "zip_size": 4789410
         },
         {
             "book": "tam-muslim",
             "name": "Sahih Muslim",
+            "name_native": "ஸஹீஹ் முஸ்லிம்",
             "hadith_count": 7219,
             "section_count": 56,
-            "checksum": "2a2a13bd6a88c7ac3980541596795134ca840efd38c7a4d899f47bd06121937f",
+            "checksum": "b109cf2539aed4886c8605ede6db3ddb3e00047bf149c02ec3d71ef5f7cc973a",
             "zip_path": "tam/tam-muslim.sqlite.zip",
-            "file_size": 8830976,
-            "zip_size": 1969350
+            "file_size": 8839168,
+            "zip_size": 1961233
         }
     ]
 }
